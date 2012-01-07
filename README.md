@@ -5,7 +5,7 @@ A flashcard-like app with audio playback to aid in the memorization of Bible ver
 I wrote this app as a personal project in my first baby step into mobile/app development. Hope you enjoy it!
 
 ## Features ##
-* Works both in the Safari browser and in the app.
+* Works both in the Safari browser and in the app (iPad, iphone, ipod touch).
 * It has persistent local storage of the verses even if app is force-quit.
 * Verse by verse audio to aid the auditory memory.
 * Uses Phonegap framework
