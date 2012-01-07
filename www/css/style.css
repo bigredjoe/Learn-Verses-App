@@ -2094,8 +2094,7 @@ a.ui-link-inherit {
 }
 #passage {
   text-align: center;
-  font-size: 1.3em;
-  margin-left: 5px;
+  width: 98%;
 }
 #about-footer p {
   text-align: center;
@@ -2108,4 +2107,5 @@ a.ui-link-inherit {
 audio {
   display: block;
   margin-left: 20px;
+  margin-top: 10px;
 }
