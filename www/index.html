@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+
+	<link rel="stylesheet" href="css/jqmobile.structure.css" type="text/css"  title="no title" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/min/scripts-min.js"></script>
+    <script type="text/javascript">
+	
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	var RunWhenReady = function() {
+		
+		//navigator.notification.alert("PhoneGap is working")
+		// do your thing!
+		if (window.localStorage.length > 1) {
+			 initpassages("true");
+		}
+
+			// $("#title").text(localStorage.previousTitle);
+			// $("#passage").val(localStorage.previousPassage);
+		$("#passageInput").submit(function(){
+			initpassages();
+			return false;
+		});
+		$("#passage").keydown(function(event){
+			if (event.which == 13) {
+
+				initpassages();
+				return false;
+			};
+
+		});
+		$.mobile.defaultPageTransition = "fade";
+	}
+	
+	function onBodyLoad()
+	{	
+		document.addEventListener("deviceready", onDeviceReady, false);
+		RunWhenReady();		
+		
+	}
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		// do your thing!
+		RunWhenReady();
+	}
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+	<div id="main" data-role="page">
+
+		<div data-role="header">
+			<h1>Learning Verses App</h1>
+			<a href="#info" data-icon="info" data-iconpos="notext" data-direction="reverse">Home</a>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<div id="wrapper">
+				<form id="passageInput">
+					<input id="passage" type="text" name="passage" data-theme="b" />
+				    <input type="submit" value="Create Flashcards" data-role="button" data-theme="a" />
+				</form>
+				<h1 id="title" class="center">Enter a Passage and Press "Create Flashcards"</h1>
+				<div id="scriptures"></div>
+			</div>
+		</div><!-- /content -->
+
+	</div><!-- /page -->
+	<div id="info" data-role="page">
+		<div  data-role="header">
+			<h1>About</h1>
+			<a href="#main" data-icon="arrow-l" data-inline="true" data-direction="reverse">Back</a>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<h1>Learning Verses</h1>
+			<p>I wrote Learning Verses as a personal app to help me memorize Bible verses quicker. It might be a little rough around the edges. I hope you like it.</p>
+			<p>For those interested I build this application using Phonegap and JQuery Mobile. And the translation I used is the awesome ESV which has a great api!</p>
+			<h2>About Me</h2>
+			<p>If you like what I have done you can check out my portfolio at <a href="http://www.standingontheceiling.com">Standing on the Ceiling</a></p>
+		</div><!-- /content -->
+		<div id="about-footer" data-role="footer">
+			 <p>Learning Verses App Copyright © 2012 - English Standard Version® (ESV®) Copyright © 2001 by Crossway</p>
+		</div>
+	</div><!-- /page -->
+
+	<div class="hidden" id="xmlimport"></div>
+	<script id="partialloading" type="text/x-handlebars-template"></script>
+  </body>
+</html>

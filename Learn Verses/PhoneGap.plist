@@ -18,8 +18,6 @@
 	<false/>
 	<key>OpenAllWhitelistURLsInWebView</key>
 	<false/>
-	<key>ExternalHosts</key>
-	<array/>
 	<key>Plugins</key>
 	<dict>
 		<key>com.phonegap.accelerometer</key>
@@ -47,5 +45,11 @@
 		<key>com.phonegap.splashscreen</key>
 		<string>PGSplashScreen</string>
 	</dict>
+	<key>ExternalHosts</key>
+	<array>
+		<string>*.jquery.com</string>
+		<string>stream.esvmedia.org</string>
+		<string>*.esvapi.org</string>
+	</array>
 </dict>
 </plist>
