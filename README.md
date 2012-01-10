@@ -13,7 +13,7 @@ I wrote this app as a personal project in my first baby step into mobile/app dev
 ## Why I am proud of it ##
  Why programming this project, I learned the basics of LESS CSS, Handlebars.js, Jquery Mobile, XML, and Local Storage. 
  
- ### Challenges of Development ###
+### Challenges of Development ###
 * Having to interact with an API not formulated for javascript.
 * Creating a partial function for reading local files for Handlebars.js and initializing callback javascript.
 * Refactoring and optimizing my code again and again.
