@@ -7,7 +7,7 @@ I wrote this app as a personal project in my first baby step into mobile/app dev
 ## Features ##
 * Works both in the Safari browser and in the app (iPad, iPhone, iPod Touch).
 * It has persistent local storage of the verses even if app is force-quit.
-* Verse by verse audio to aid the auditory memory.
+* Verse by verse audio to aid the auditory learner.
 * Uses Phonegap framework
 
 ## Why I am proud of it ##
