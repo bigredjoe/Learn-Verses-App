@@ -11,7 +11,7 @@ I wrote this app as a personal project in my first baby step into mobile/app dev
 * Uses Phonegap framework
 
 ## Why I am proud of it ##
- Why programming this project, I learned the basics of LESS CSS, Handlebars.js, Jquery Mobile, XML, and Local Storage. 
+ While programming this project, I learned the basics of LESS CSS, Handlebars.js, Jquery Mobile, XML, and Local Storage. 
  
 ### Challenges of Development ###
 * Having to interact with an API not formulated for javascript.
